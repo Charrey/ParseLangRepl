@@ -1,11 +1,23 @@
 package parselang.parser.exceptions;
 
+/**
+ * Exception thrown when the parser could not perform a specific parsing task
+ */
 public class ParseErrorException extends Exception {
 
+    /**
+     * Creates a new parse exception
+     * @param originalString original string being parsed
+     * @param index index of the original string at which no alternative is found.
+     */
     public ParseErrorException(String originalString, int index) {
         super("No alternative at index " + findRowColumn(originalString, index) + " at " + whichCharacter(originalString, index));
     }
 
+    /**
+     * Creates a new parse exception without processing used for performance benefits when it is guaranteed the error
+     * will not be shown to the user.
+     */
     public ParseErrorException() {
     }
 

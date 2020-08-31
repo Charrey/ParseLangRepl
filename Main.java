@@ -14,6 +14,9 @@ import static parselang.parser.ParseRuleStorage.nonTerm;
 
 public class Main {
 
+    /**
+    * Run your favourite ParseLang programs here!
+    **/
     public static void main(String[] args) throws IOException {
         runDemo("examples/doublequotes.plang");
         runDemo("examples/forloop.plang");
@@ -29,10 +32,10 @@ public class Main {
         Parser parser = new RecursiveParser();
         parser.setVerbosity(0);
         ParseRuleStorage storage = new ParseRuleStorage();
-        storage.prepare(new ParseLangV1(), new NonTerminal("HighLevel"));
+        storage.prepare(new ParseLangV1(), new NonTerminal("HighLevel", false));
         try {
-            ParseResult result = parser.readFile(storage, program, nonTerm("HighLevel"));
-            System.out.println("> " + new Interpreter().run(program, result.getTree()));
+            ParseResult result = parser.readFile(program, storage, nonTerm("HighLevel"));
+            System.out.println("> " + new Interpreter().run(result.getTree()));
         } catch (Exception e) {
             System.out.println("> " + e.getMessage());
             e.printStackTrace();

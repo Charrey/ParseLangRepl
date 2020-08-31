@@ -7,6 +7,9 @@ import java.util.List;
 
 import static parselang.parser.ParseRuleStorage.*;
 
+/**
+ * Fist iteration of the ParseLang base language
+ */
 public class ParseLangV1 implements Language {
 
 

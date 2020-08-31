@@ -1,6 +1,8 @@
 # ParseLang
 _The language that expresses itself_
 
+![ParseLang logo](https://storage.googleapis.com/replit/images/1598887049795_f0ae42f183af478211f3d83edfede926.png)
+
 
 Programmers love languages. They love to use them, have both interesting and fruitless discussions about them, and above all, they love to design them. All that love comes at a cost, however. This is why there are about 24 Javascript frameworks and about 9000 programming languages, most of which you've never heard of. Many of these languages originate from people who want to develop in a specific style that their preferred language does not support (e.g. lambdas), or who want to express their world view in their code.
 
@@ -125,7 +127,7 @@ This example adds two new parse rules to the parser:
 1. SimpleExpression = FooExpression
 2. FooExpression = ‘foo’ WhiteSpace* Expression
 
-Note that ParseLang uses a packrat parser. That means that an order exists between parse rules, and that it will always attempt parse rules in that order. Rule 1 will be added as *first* candidate for the nonterminal SimpleExpression because of the usage of the `<` symbol. Rule 2 will by default be added as the *last* candidate for FooExpression.
+Note that ParseLang uses a [packrat parser](http://hdl.handle.net/1721.1/87310). That means that an order exists between parse rules, and that it will always attempt parse rules in that order. Rule 1 will be added as *first* candidate for the nonterminal SimpleExpression because of the usage of the `<` symbol. Rule 2 will by default be added as the *last* candidate for FooExpression.
 
 It starts with indicating which nonterminal you would like to add a new rule for (marked in red). This can be a new nonterminal or one that already exists. Then, you specify when this nonterminal will be used. In the example, we add a simple rule to the front of the list of rules to parse a SimpleExpression as, such that it can also be parsed as a single FooExpression.
 
