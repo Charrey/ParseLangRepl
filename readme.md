@@ -1,6 +1,8 @@
 # ParseLang
 _The language that expresses itself_
 
+*(Use the PDF version for a table of contents and better layout)*
+
 ![ParseLang logo](https://storage.googleapis.com/replit/images/1598887049795_f0ae42f183af478211f3d83edfede926.png)
 
 
