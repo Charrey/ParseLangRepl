@@ -1,0 +1,7 @@
+
+
+ConcatExpression < SimpleExpression = 'concat ' Expression a 'with ' Expression b {
+    ~concat([a,b])
+}
+
+concat 3 with 5
