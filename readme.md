@@ -14,7 +14,7 @@ Not with ParseLang.
 
 Some languages are more flexible than others: some allow different ways to express the same semantics, some have weak typing and some don't even care whether you use semicolons. ParseLang is so flexible, it allows all of this and much more. In fact, it allows you to **_change the grammar of the language itself while it is parsing_**. In it, you program by extending the language with new parse rules and also using the language to describe the semantics of that new rule. This way, it allows _any semantics_ to be coupled with _any_ textual expression. 
 
-While it allows you to extend the language to a beautiful, simple whole, it also allows you to go completelty overboard. Take the following two examples of beauty and madness that demonstrate what ParseLang supports after extending the language yourself:
+While it allows you to extend the language to a beautiful, simple whole, it also allows you to go completely overboard. Take the following two examples of beauty and madness that demonstrate what ParseLang supports after extending the language yourself:
 
 ```
 
